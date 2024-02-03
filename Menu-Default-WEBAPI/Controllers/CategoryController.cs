@@ -61,12 +61,16 @@ namespace Menu_Default_WEBAPI.Controllers
 
         // POST api/<CategoryController>
         [HttpPost("AddCategory")]
-        public async Task<IActionResult> AddCategory([FromBody] CategoryModel CategoryModel)
+        public async Task<IActionResult> AddCategory([FromBody] CategoryModel categoryModel)
         {
             try
             {
-                await _categoryRepository.Add(CategoryModel);
-                return Ok(new { Message = "CategoryModel added successfully.", CategoryModel = CategoryModel });
+
+                //CategoryModel categoryModel = new CategoryModel { CategoryName = CategoryDTO.CategoryName };
+
+                await _categoryRepository.Add(categoryModel);
+
+                return Ok(new { Message = "CategoryModel added successfully.", CategoryModel = categoryModel });
             }
             catch (Exception ex)
             {
@@ -87,9 +91,11 @@ namespace Menu_Default_WEBAPI.Controllers
                 {
                     return NotFound();
                 }
-                ExistingCategoryModel.Id = CategoryModel.Id;
+                
                 ExistingCategoryModel.CategoryName = CategoryModel.CategoryName;
+
                 await _categoryRepository.Update(ExistingCategoryModel);
+
                 return Ok(new { Message = "CategoryModel updated successfully.", CategoryModel = ExistingCategoryModel });
             }
             catch (Exception ex)

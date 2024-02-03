@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Menu_Default_WEBAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240202155650_initial migration")]
+    [Migration("20240203162012_initial migration")]
     partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,7 @@ namespace Menu_Default_WEBAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorys");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.FoodModel", b =>
@@ -63,18 +63,18 @@ namespace Menu_Default_WEBAPI.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Foods");
+                    b.ToTable("Food");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.FoodModel", b =>
                 {
-                    b.HasOne("Menu_Default_WEBAPI.Models.CategoryModel", "Category")
+                    b.HasOne("Menu_Default_WEBAPI.Models.CategoryModel", "Categorys")
                         .WithMany("Foods")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Categorys");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.CategoryModel", b =>

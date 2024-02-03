@@ -89,6 +89,7 @@ namespace Menu_Default_WEBAPI.Controllers
                 }
                 ExistingFoodModel.CategoryId = FoodModel.CategoryId;
                 ExistingFoodModel.FoodTitle = FoodModel.FoodTitle;
+                ExistingFoodModel.FoodDescription = FoodModel.FoodDescription;
                 ExistingFoodModel.Price = FoodModel.Price;
                 await _foodRepository.Update(ExistingFoodModel);
                 return Ok(new { Message = "FoodModel updated successfully.", FoodModel = ExistingFoodModel });

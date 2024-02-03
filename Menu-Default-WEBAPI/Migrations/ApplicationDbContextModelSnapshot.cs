@@ -34,7 +34,7 @@ namespace Menu_Default_WEBAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorys");
+                    b.ToTable("Category");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.FoodModel", b =>
@@ -61,18 +61,18 @@ namespace Menu_Default_WEBAPI.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Foods");
+                    b.ToTable("Food");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.FoodModel", b =>
                 {
-                    b.HasOne("Menu_Default_WEBAPI.Models.CategoryModel", "Category")
+                    b.HasOne("Menu_Default_WEBAPI.Models.CategoryModel", "Categorys")
                         .WithMany("Foods")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Categorys");
                 });
 
             modelBuilder.Entity("Menu_Default_WEBAPI.Models.CategoryModel", b =>

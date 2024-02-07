@@ -2425,19 +2425,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\mandeep.dalee\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI.csproj",
+      "projectUniqueName": "C:\\NPSProjects\\My\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI.csproj",
       "projectName": "Menu-Default-WEBAPI",
-      "projectPath": "D:\\Projects\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\obj\\",
+      "projectPath": "C:\\NPSProjects\\My\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI.csproj",
+      "packagesPath": "C:\\Users\\mandeep.dalee\\.nuget\\packages\\",
+      "outputPath": "C:\\NPSProjects\\My\\Menu-Default-WEBAPI\\Menu-Default-WEBAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mandeep.dalee\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
